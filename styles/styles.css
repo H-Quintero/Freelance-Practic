@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-    width: 75%;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
@@ -32,10 +32,18 @@ body {
     background-color: var(--secundary);
 }
 
-.nav-up {
-    
+.nav-up {    
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .nav-up {
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
 }
 
 .nav-up a {
@@ -50,3 +58,5 @@ body {
     background-color: var(--primary);
     color: var(--dark);
 }
+
+
