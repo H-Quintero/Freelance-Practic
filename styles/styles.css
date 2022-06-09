@@ -4,7 +4,7 @@
     --ligth: #ffffff;
     --dark: #212121;
     --primary: #f3c949;
-    --secundary: #177be6;
+    --secundary: #009999;
     --grey: #757575;
     --grey-gradient: #dfe9f3;
 }
@@ -12,6 +12,7 @@
 html {
     font-size: 65.2%;
     box-sizing: border-box;
+    
 }
 
 *,
@@ -82,12 +83,41 @@ h3 {
     border-radius: 0.5rem;
     width: 80%;
     text-align: center;
+    border: none;
 }
 
 @media (min-width: 768px) {
     .button {
         width: auto;
     }
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+/* Utilidades */
+
+.w-sm-100 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.align-rigth {
+    justify-content: flex-end;
+}
+
+.mg-top {
+    margin-top: 5rem;
 }
 
 /* NavBar */
@@ -125,7 +155,7 @@ h3 {
 /* Hero */
 
 .hero {
-    background-image: url(/img/my_hero.jpg);
+    background-image: url(/img/hero-programacion-web.jpg);
     background-repeat: round;
     background-size: cover;
     height: 450px;
@@ -187,3 +217,71 @@ h3 {
     align-items: center;
 }
 
+/* Contact */
+
+.form {
+    background-color: var(--grey);
+    width: min(60rem, 100%); /* Min utilizará el valor mas pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.form fieldset {
+    border: none;
+}
+
+.form legend {
+    color: var(--primary);
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bolt;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .camp-container {
+        display: grid;  
+        grid-template-columns: 1fr 1fr;   
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;     
+    }
+
+    .camp:nth-child(3),
+    .camp:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+}
+
+.camp {
+    margin-bottom: 1rem;
+}
+
+.camp label {
+    color: var(--ligth);
+    font-weight: bolt;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.camp textarea {
+    height: 20rem;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.send .button {
+    width: 100%;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+}
